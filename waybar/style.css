@@ -1,0 +1,44 @@
+* {
+   background-color: #fdf6e3;
+   color: #586e75;
+   font-family: "Liberation Mono";
+   font-weight: bold;
+}
+tooltip {
+   text-shadow: 0px 0px;
+}
+#memory {
+   padding-right: 8px;
+   padding-left: 8px;
+   background-color: #eee8d5;
+}
+#tray {
+   padding-right: 4px;
+   padding-left: 4px;
+}
+#wireplumber {
+   background-color: #eee8d5;
+   padding-right: 8px;
+   padding-left: 8px;
+}
+#wireplumber.muted {
+   background-color: #b58900;
+   color: #fdf6e3;
+}
+#battery {
+   padding-right: 8px;
+   padding-left: 8px;
+}
+#battery.warning {
+   background-color: #b58900;
+   color: #fdf6e3;
+}
+#battery.critical {
+   background-color: #dc322f;
+   color: #eee8d5;
+}
+#custom-clock {
+   background-color: #eee8d5;
+   padding-right: 8px;
+   padding-left: 8px;
+}

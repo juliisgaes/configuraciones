@@ -1,0 +1,37 @@
+{
+   "layer": "bottom",
+   "output": ["*"],
+   "position": "top",
+   "height": 30,
+   "modules-left": ["memory"],
+   "modules-right": ["tray", "wireplumber", "battery", "custom/clock"],
+   "memory": {
+      "format": "RAM usada: {used} GiB",
+      "tooltip": false
+   },
+   "margin-bottom": 10,
+   "tray": {
+      "icon-size": 20,
+      "spacing": 4
+   },
+   "wireplumber": {
+      "format": "Volumen: {volume}%",
+      "format-muted": "Audio muteado",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "tooltip": false
+   },
+   "battery": {
+      "states": {
+         "warning": 20,
+	 "critical": 10
+      },
+      "format": "Batería: {capacity}%",
+      "tooltip": false
+   },
+   "custom/clock": {
+      "exec": "date +'%H:%M'",
+      "interval": 60,
+      "tooltip": false
+   }
+}
