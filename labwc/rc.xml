@@ -38,6 +38,12 @@
       <topMaximize>yes</topMaximize>
       <notifyClient>always</notifyClient>
    </snapping>
+   <regions>
+      <region name="snap-1" x="0%" y="0%" width="50%" height="50%"/>
+      <region name="snap-2" x="0%" y="50%" width="50%" height="50%"/>
+      <region name="snap-3" x="50%" y="0%" width="50%" height="50%"/>
+      <region name="snap-4" x="50%" y="50%" width="50%" height="50%"/>
+   </regions>
    <desktops number="4">
       <popupTime>0</popupTime>
       <prefix>Escritorio</prefix>
