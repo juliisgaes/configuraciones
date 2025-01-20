@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<labwc_config>
+   <core>
+      <decoration>server</decoration>
+      <gap>0</gap>
+      <adaptiveSync>no</adaptiveSync>
+      <allowTearing>no</allowTearing>
+      <reuseOutputMode>no</reuseOutputMode>
+      <xwaylandPersistence>no</xwaylandPersistence>
+   </core>
+   <placement>
+      <policy>center</policy>
+   </placement>
+   <windowSwitcher show="yes" preview="yes" outlines="yes" allWorkspaces="no">
+      <fields>
+         <field content="identifier" width="100%"/>
+      </fields>
+   </windowSwitcher>
+   <resistance>
+      <screenEdgeStrength>20</screenEdgeStrength>
+      <windowEdgeStrength>20</windowEdgeStrength>
+      <unSnapThreshold>20</unSnapThreshold>
+      <unMaximizeThreshold>150</unMaximizeThreshold>
+   </resistance>
+   <focus>
+      <followsMouse>no</followsMouse>
+      <raiseOnFocus>no</raiseOnFocus>
+   </focus>
+   <snapping>
+      <range>1</range>
+      <overlay>
+         <enabled>yes</enabled>
+	 <delay>
+            <inner>500</inner>
+	    <outer>500</outer>
+	 </delay>
+      </overlay>
+      <topMaximize>yes</topMaximize>
+      <notifyClient>always</notifyClient>
+   </snapping>
+   <desktops number="4">
+      <popupTime>0</popupTime>
+      <prefix>Escritorio</prefix>
+   </desktops>
+   <theme>
+      <icon>Papirus-Light</icon>
+      <titlebar>
+         <layout>icon:max,close</layout>
+         <showTitle>yes</showTitle>
+      </titlebar>
+      <cornerRadius>8</cornerRadius>
+      <keepBorder>yes</keepBorder>
+      <dropShadows>yes</dropShadows>
+   </theme>
+   <margin top="10" bottom="10" left="10" right="10"/>
+   <resize>
+      <popupShow>Never</popupShow>
+      <drawContents>yes</drawContents>
+   </resize>
+   <keyboard layoutScope="global">
+      <numlock>on</numlock>
+      <keybind key="W-q" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Close"/>
+      </keybind>
+      <keybind key="W-S-Left" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SnapToEdge" direction="Left"/>
+      </keybind>
+      <keybind key="W-S-Up" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SnapToEdge" direction="Up"/>
+      </keybind>
+      <keybind key="W-S-Right" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SnapToEdge" direction="Right"/>
+      </keybind>
+      <keybind key="W-S-Down" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SnapToEdge" direction="Down"/>
+      </keybind>
+      <keybind key="W-Right" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="NextWindow"/>
+      </keybind>
+      <keybind key="W-Left" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="PreviousWindow"/>
+      </keybind>
+      <keybind key="W-1" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="GoToDesktop" to="1"/>
+      </keybind>
+      <keybind key="W-2" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="GoToDesktop" to="2"/>
+      </keybind>
+      <keybind key="W-f" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+	 <action name="ToggleFullscreen"/>
+      </keybind>
+      <keybind key="W-space" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="ToggleMaximize"/>
+      </keybind>
+      <keybind key="W-3" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="GoToDesktop" to="3"/>
+      </keybind>
+      <keybind key="W-4" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="GoToDesktop" to="4"/>
+      </keybind>
+      <keybind key="W-S-1" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SendToDesktop" to="1" follow="no"/>
+      </keybind>
+      <keybind key="W-S-2" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SendToDesktop" to="2" follow="no"/>
+      </keybind>
+      <keybind key="W-S-3" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SendToDesktop" to="3" follow="no"/>
+      </keybind>
+      <keybind key="W-S-4" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="SendToDesktop" to="4" follow="no"/>
+      </keybind>
+      <keybind key="XF86AudioMute" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"/>
+      </keybind>
+      <keybind key="XF86AudioLowerVolume" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"/>
+      </keybind>
+      <keybind key="XF86AudioRaiseVolume" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"/>
+      </keybind>
+      <keybind key="XF86AudioMicMute" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"/>
+      </keybind>
+      <keybind key="XF86MonBrightnessDown" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="brillo -u 200000 -U 5"/>
+         <action name="Execute" command="brillo -O"/>
+      </keybind>
+      <keybind key="XF86MonBrightnessUp" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="brillo -u 200000 -A 5"/>
+         <action name="Execute" command="brillo -O"/>
+      </keybind>
+      <keybind key="XF86SelectiveScreenshot" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="gscreenshot"/>
+      </keybind>
+      <keybind key="W-m" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="wofi"/>
+      </keybind>
+      <keybind key="W-l" layoutDependent="no" onRelease="no" allowWhenLocked="no">
+         <action name="Execute" command="swaylock"/>
+      </keybind>
+      <keybind key="W-S-s" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
+         <action name="Execute" command="doas zzz"/>
+      </keybind>
+      <keybind key="W-S-r" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
+         <action name="Execute" command="doas shutdown -r now"/>
+      </keybind>
+      <keybind key="W-S-p" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
+         <action name="Execute" command="doas shutdown -P now"/>
+      </keybind>
+      <repeatRate>25</repeatRate>
+      <repeatDelay>600</repeatDelay>
+   </keyboard>
+   <mouse>
+      <doubleClickTime>500</doubleClickTime>
+      <context name="Maximize">
+         <mousebind button="Left" action="Click">
+            <action name="ToggleMaximize"/>
+	 </mousebind>
+      </context>
+      <context name="Close">
+         <mousebind button="Left" action="Click">
+            <action name="Close"/>
+	 </mousebind>
+      </context>
+      <context name="TitleBar">
+         <mousebind button="Left" action="Drag">
+	    <action name="Move"/>
+	    <action name="Raise"/>
+	 </mousebind>
+      </context>
+      <context name="Top">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="Bottom">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="Left">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="Right">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="TRCorner">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="TLCorner">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="BLCorner">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="BRCorner">
+         <mousebind button="Left" action="Drag">
+            <action name="Resize"/>
+	 </mousebind>
+      </context>
+      <context name="Client">
+         <mousebind button="Left" action="Click">
+	    <action name="Focus"/>
+	    <action name="Raise"/>
+	 </mousebind>
+      </context>
+      <context name="Frame">
+         <mousebind button="W-Left" action="Drag">
+	    <action name="Move"/>
+	    <action name="Raise"/>
+         </mousebind>
+         <mousebind button="W-Right" action="Drag">
+	    <action name="Resize"/>
+	 </mousebind>
+      </context>
+   </mouse>
+   <libinput>
+      <device category="touchpad">
+         <naturalScroll>yes</naturalScroll>
+      </device>
+   </libinput>
+</labwc_config>

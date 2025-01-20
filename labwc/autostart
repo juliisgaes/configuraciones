@@ -1,0 +1,9 @@
+#!/bin/bash
+pipewire &
+pcmanfm-qt --desktop &
+gammastep -O 4000 &
+brillo -u 200000 -I &
+waybar &
+nm-tray &
+blueman-applet &
+lxqt-policykit-agent &

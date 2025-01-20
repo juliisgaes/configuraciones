@@ -1,0 +1,5 @@
+QT_STYLE_OVERRIDE=adwaita
+XCURSOR_THEME=Breeze_Snow
+GOOGLE_API_KEY=
+XKB_DEFAULT_LAYOUT=us,latam
+XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
