@@ -45,7 +45,7 @@
       <region name="snap-4" x="50%" y="50%" width="50%" height="50%"/>
    </regions>
    <desktops number="4">
-      <popupTime>0</popupTime>
+      <popupTime>1000</popupTime>
       <prefix>Escritorio</prefix>
    </desktops>
    <theme>
@@ -57,6 +57,11 @@
       <cornerRadius>8</cornerRadius>
       <keepBorder>yes</keepBorder>
       <dropShadows>yes</dropShadows>
+      <font>
+         <name>FreeMono</name>
+	 <size>12</size>
+	 <weight>bold</weight>
+      </font>
    </theme>
    <margin top="10" bottom="10" left="10" right="10"/>
    <resize>
