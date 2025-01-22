@@ -148,16 +148,7 @@
          <action name="Execute" command="wofi"/>
       </keybind>
       <keybind key="W-l" layoutDependent="no" onRelease="no" allowWhenLocked="no">
-         <action name="Execute" command="swaylock"/>
-      </keybind>
-      <keybind key="W-S-s" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
-         <action name="Execute" command="doas zzz"/>
-      </keybind>
-      <keybind key="W-S-r" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
-         <action name="Execute" command="doas shutdown -r now"/>
-      </keybind>
-      <keybind key="W-S-p" layoutDependent="no" onRelease="no" allowWhenLocked="yes">
-         <action name="Execute" command="doas shutdown -P now"/>
+         <action name="Execute" command="wlogout"/>
       </keybind>
       <repeatRate>25</repeatRate>
       <repeatDelay>600</repeatDelay>

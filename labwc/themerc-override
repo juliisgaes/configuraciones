@@ -1,15 +1,15 @@
 # tamaño del borde de las ventanas
 border.width: 2
 # color del borde de las ventanas activas
-window.active.border.color: #eee8d5
+window.active.border.color: #dfd4b1
 # color del borde de las ventanas inactivas
-window.inactive.border.color: #dfd4b1
+window.inactive.border.color: #eee8d5
 # color del indicador para las acciones ToggleKeybinds
 window.active.indicator.toggled-keybind.color: #eee8d5
 # color de la barra de título para las ventanas activas
-window.active.title.bg.color: #eee8d5
+window.active.title.bg.color: #dfd4b1
 # color de la barra de título para las ventanas inactivas
-window.inactive.title.bg.color: #dfd4b1
+window.inactive.title.bg.color: #eee8d5
 # color de el texto en la barra de título para las ventanas activas
 window.active.label.text.color: #586e75
 # color de el texto en la barra de título para las ventanas inactivas
