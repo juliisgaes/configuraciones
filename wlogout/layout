@@ -1,0 +1,36 @@
+{
+   "label": "lockandsuspend",
+   "action": "/home/juligar/.config/wlogout/scripts/lockandsuspend.sh",
+   "text": "B & s"
+   "keybind": "0"
+}
+{
+   "label": "lock",
+   "action": "swaylock",
+   "text": "Bloquear",
+   "keybind": "b"
+}
+{
+   "label": "suspend",
+   "action": "doas zzz",
+   "text": "Suspender",
+   "keybind": "s"
+}
+{
+   "label": "logout",
+   "action": "labwc -e",
+   "text": "Cerrar sesión",
+   "keybind": "c"
+}
+{
+   "label": "reboot",
+   "action": "doas shutdown -r now",
+   "text": "Reiniciar",
+   "keybind": "r"
+}
+{
+   "label": "shutdown",
+   "action": "doas shutdown -P now",
+   "text": "Apagar",
+   "keybind": "a"
+}

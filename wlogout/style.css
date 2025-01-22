@@ -1,0 +1,52 @@
+* {
+	background-image: none;
+	box-shadow: none;
+	font-family: FreeMono;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+window {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+    border-radius: 0;
+    border-color: #eee8d5;
+	text-decoration-color: #FFFFFF;
+    color: #586e75;
+	background-color: #fdf6e3;
+	border-style: solid;
+	border-width: 2px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #dfd4b1;
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/lock.png"), url("/home/juligar/.config/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/logout.png"), url("/home/juligar/.config/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/suspend.png"), url("/home/juligar/.config/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/shutdown.png"), url("/home/juligar/.config/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/reboot.png"), url("/home/juligar/.config/wlogout/icons/reboot.png"));
+}
+#lockandsuspend {
+    background-image: image(url("/home/juligar/.config/wlogout/icons/lockandsuspend.png"), url("/home/juligar/.config/wlogout/icons/lockandsuspend.png"));
+}
