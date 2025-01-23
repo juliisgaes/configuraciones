@@ -9,11 +9,11 @@
       <xwaylandPersistence>no</xwaylandPersistence>
    </core>
    <placement>
-      <policy>center</policy>
+      <policy>cascade</policy>
    </placement>
    <windowSwitcher show="yes" preview="yes" outlines="yes" allWorkspaces="no">
       <fields>
-         <field content="identifier" width="100%"/>
+         <field content="identifier" width="25%"/>
       </fields>
    </windowSwitcher>
    <resistance>

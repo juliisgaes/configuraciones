@@ -10,14 +10,14 @@ tooltip {
 #memory {
    padding-right: 8px;
    padding-left: 8px;
-   background-color: #eee8d5;
+   background-color: #dfd4b1;
 }
 #tray {
    padding-right: 4px;
    padding-left: 4px;
 }
 #wireplumber {
-   background-color: #eee8d5;
+   background-color: #dfd4b1;
    padding-right: 8px;
    padding-left: 8px;
 }
@@ -38,7 +38,7 @@ tooltip {
    color: #eee8d5;
 }
 #custom-clock {
-   background-color: #eee8d5;
+   background-color: #dfd4b1;
    padding-right: 8px;
    padding-left: 8px;
 }
