@@ -1,3 +1,3 @@
-# Mis configuraciones.
+# mis configuraciones.
 
-Estas son las configuraciones que uso en mis computadoras.
+estas son las configuraciones que uso en mis computadoras.
