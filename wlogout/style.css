@@ -1,0 +1,41 @@
+* {
+	box-shadow: none;
+	font-weight: bold;
+	font-family: FreeMono;
+	background-image: none;
+}
+window {
+	background-color: rgba(244, 221, 221, 0.85);
+}
+button {
+	margin: 14px;
+	color: #ffffff;
+	border-width: 0px;
+	border-radius: 6px;
+	background-size: 30%;
+	background-color: #9c4146;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+button:focus, button:active, button:hover {
+	background-color: #40000a;
+	outline-style: none;
+}
+#bloquear {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/bloquear.png"))
+}
+#bloquear-hibernar {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/bloquear-hibernar.png"))
+}
+#hibernar {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/hibernar.png"))
+}
+#cerrar-sesión {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/cerrar-sesión.png"))
+}
+#apagar {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/apagar.png"))
+}
+#reiniciar {
+	background-image: image(url("/home/juligar/.config/wlogout/recursos/reiniciar.png"))
+}

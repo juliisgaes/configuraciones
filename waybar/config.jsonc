@@ -1,0 +1,23 @@
+{
+	"layer": "top",
+	"output": ["*"],
+	"position": "right",
+	"modules-left": ["image", "battery"],
+	"modules-right": ["clock"],
+	"spacing": 0,
+	"image": {
+		"path": "/home/juligar/.config/waybar/recursos/power.png",
+		"size": 28,
+		"on-click": "wlogout"
+	},
+	"battery": {
+		"format": "bat\n{capacity}",
+		"tooltip": false,
+		"justify": "center"
+	},
+	"clock": {
+		"format": "{:%I:\n%M,\n%p.}",
+		"tooltip": false,
+		"justify": "center"
+	}
+}

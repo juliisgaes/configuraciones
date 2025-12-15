@@ -1,0 +1,30 @@
+{
+	"label": "bloquear",
+	"action": "",
+	"keybind": "b"
+}
+{
+	"label": "bloquear-hibernar",
+	"action": "",
+	"keybind": "d"
+}
+{
+	"label": "hibernar",
+	"action": "doas zzz",
+	"keybind": "h"
+}
+{
+	"label": "cerrar-sesión",
+	"action": "",
+	"keybind": "c"
+}
+{
+	"label": "apagar",
+	"action": "doas shutdown -P now",
+	"keybind": "a"
+}
+{
+	"label": "reiniciar",
+	"action": "doas shutdown -r now",
+	"keybind": "r"
+}

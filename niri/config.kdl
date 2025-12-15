@@ -69,6 +69,22 @@ output "eDP-1" {
 		top-left
 	}
 }
+output "HDMI-A-1" {
+	// off
+	// mode
+	// modeline
+	scale 1.0
+	// transform
+	// position
+	// variable-refresh-rate
+	// focus-at-startup
+	background-color "#9c4146"
+	backdrop-color "#9c4146"
+	hot-corners {
+		// off
+		top-left
+	}
+}
 // Configuración relacionada al acomodo de ventanas
 layout {
 	gaps 6
@@ -102,7 +118,26 @@ layout {
 	}
 	shadow {
 		off
+		softness 30
+		spread 2
+		color "#000000"
 	}
+}
+// Configurando apariencia de waybar
+layer-rule {
+	match namespace="waybar"
+	match at-startup=true
+	shadow {
+		on
+	}
+}
+// Configurando apariencia de fuzzel
+layer-rule {
+	match namespace="launcher"
+	shadow {
+		on
+	}
+	geometry-corner-radius 6
 }
 // Ajustes relacionados al cursor
 cursor {
@@ -188,12 +223,15 @@ binds {
 	XF86MonBrightnessUp { spawn-sh "brillo -u 200000 -A 5 && brillo -O"; }
 	// Lanzar aplicaciones
 	Mod+M { spawn "fuzzel"; }
+	Mod+P { spawn "wlogout"; }
 	// Capturas de pantalla
 	Print { screenshot; }
 	Ctrl+Print { screenshot-screen; }
 	Alt+Print { screenshot-window; }
 }
 // Programas lanzados al inicio
+spawn-sh-at-startup "gammastep -O 5000"
 spawn-sh-at-startup "brillo -u 200000 -I"
 spawn-sh-at-startup "pipewire"
 spawn-sh-at-startup "swww-daemon"
+spawn-sh-at-startup "waybar"
