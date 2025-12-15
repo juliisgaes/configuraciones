@@ -62,8 +62,8 @@ output "eDP-1" {
 	position x=0 y=0
 	// variable-refresh-rate
 	focus-at-startup
-	background-color "#6d2023"
-	backdrop-color "#6d2023"
+	background-color "#9c4146"
+	backdrop-color "#9c4146"
 	hot-corners {
 		// off
 		top-left
@@ -93,9 +93,9 @@ layout {
 	border {
 		// off
 		width 4
-		active-color "#ac2728"
-		inactive-color "#5c1c1e"
-		urgent-color "#842225"
+		active-color "#9c4146"
+		inactive-color "#775656"
+		urgent-color "#ba1a1a"
 	}
 	focus-ring {
 		off
@@ -107,7 +107,7 @@ layout {
 // Ajustes relacionados al cursor
 cursor {
 	xcursor-theme "Mocu-White-Right"
-	xcursor-size 32
+	xcursor-size 16
 	// hide-when-typing
 	// hide-after-inactive-ms
 }
