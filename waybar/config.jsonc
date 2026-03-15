@@ -2,13 +2,27 @@
 	"layer": "top",
 	"output": ["*"],
 	"position": "right",
-	"modules-left": ["image", "battery"],
-	"modules-right": ["clock"],
+	"modules-right": ["wireplumber", "battery", "clock"],
 	"spacing": 0,
 	"image": {
 		"path": "/home/juligar/.config/waybar/recursos/power.png",
 		"size": 28,
 		"on-click": "wlogout"
+	},
+	"image#image2": {
+		"path": "/home/juligar/.config/waybar/recursos/menú.png",
+		"size": 28,
+		"on-click": "fuzzel"
+	},
+	"image#image3": {
+		"path": "/home/juligar/.config/waybar/recursos/wifi.png",
+		"size": 28,
+		"on-click": "nm-connection-editor"
+	},
+	"wireplumber": {
+		"format": "vol\n{volume}",
+		"tooltip": false,
+		"justify": "center"
 	},
 	"battery": {
 		"format": "bat\n{capacity}",

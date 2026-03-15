@@ -5,27 +5,35 @@ window#waybar {
 	background-color: #f4dddd;
 }
 #image {
-	margin: 6px 6px 0px 6px;
 	padding: 6px;
 	border-radius: 4px;
+	margin: 6px 6px 0px 6px;
 	background-color: #9c4146;
 }
 #image:hover {
 	background-color: #40000a;
 }
-#battery {
-	color: #ffffff;
+#wireplumber {
 	margin: 6px;
 	padding: 6px;
+	color: #ffffff;
 	font-weight: bold;
 	border-radius: 4px;
 	background-color: #9c4146;
 }
-#clock {
-	color: #ffffff;
-	margin: 6px;
+#battery {
 	padding: 6px;
+	color: #ffffff;
 	font-weight: bold;
 	border-radius: 4px;
+	margin: 0px 6px 6px 6px;
+	background-color: #9c4146;
+}
+#clock {
+	padding: 6px;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 4px;
+	margin: 0px 6px 6px 6px;
 	background-color: #9c4146;
 }
