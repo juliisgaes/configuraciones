@@ -15,7 +15,7 @@ input {
 	touchpad {
 		// off
 		tap
-		dwt
+		// dwt
 		dwtp
 		drag true
 		drag-lock
@@ -55,7 +55,7 @@ input {
 // Configuración de salida(s)
 output "eDP-1" {
 	// off
-	mode "1366x768@60.002"
+	mode "1920x1080@60.008"
 	// modeline
 	scale 1.0
 	// transform
@@ -139,10 +139,33 @@ layer-rule {
 	}
 	geometry-corner-radius 6
 }
+// Configuración para evitar pantallas en negro con KDE Connect
+window-rule {
+	match app-id=r"org.kde.kdeconnect.daemon" // ID of presentation pointer overlay
+	open-floating true
+	open-fullscreen false
+	default-floating-position x=0 y=0 relative-to="top-left"
+  	// Adjust these to your monitor's resolution
+	min-width 1920
+	min-height 1080
+  	// Opionally customize opacity of pointer
+	// opacity 1.0
+	tiled-state true
+	focus-ring {
+	off
+	}
+	border {
+	off
+	}
+	shadow {
+	off
+	}
+	draw-border-with-background false
+}
 // Ajustes relacionados al cursor
 cursor {
-	xcursor-theme "Mocu-White-Right"
-	xcursor-size 16
+	xcursor-theme "Bibata-Modern-Ice"
+	xcursor-size 24
 	// hide-when-typing
 	// hide-after-inactive-ms
 }
@@ -150,6 +173,24 @@ cursor {
 hotkey-overlay {
 	// No mostrar en el inicio
 	skip-at-startup
+}
+// Ajustes relacionados al menú de recientes
+recent-windows {
+	// off
+	// debounce-ms
+	// Eliminando retraso de la interfaz
+	open-delay-ms 0
+	// Configurando apariencia de la interfaz
+	highlight {
+		active-color "#9c4146"
+		urgent-color "#ba1a1a"
+		// padding
+		corner-radius 6
+	}
+	// Configurando los atajos de la interfaz
+	binds {
+		Mod+Tab { next-window; }
+	}
 }
 // Atajos de teclado
 binds {
@@ -216,11 +257,19 @@ binds {
 	// Relacionados al volumen
 	XF86AudioMute { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
 	XF86AudioLowerVolume { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
-	XF86AudioRaiseVolume { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; }
+	XF86AudioRaiseVolume { spawn-sh "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"; }
 	XF86AudioMicMute { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 	// Relacionados al brillo
 	XF86MonBrightnessDown { spawn-sh "brillo -u 200000 -U 5 && brillo -O"; }
 	XF86MonBrightnessUp { spawn-sh "brillo -u 200000 -A 5 && brillo -O"; }
+	// Relacionados a medios
+	Mod+J { spawn-sh "playerctl previous"; }
+	Mod+K { spawn-sh "playerctl play-pause"; }
+	Mod+L { spawn-sh "playerctl next"; }
+	// Relacionados a la batería
+	Mod+Z { spawn-sh "doas tlp performance && notify-send 'Modo rendimiento' 'Se ha activado el modo rendimiento'"; }
+	Mod+X { spawn-sh "doas tlp balanced && notify-send 'Modo balanceado' 'Se ha activado el modo balanceado'"; }
+	Mod+C { spawn-sh "doas tlp power-saver && notify-send 'Modo ahorro' 'Se ha activado el modo ahorro'"; }
 	// Lanzar aplicaciones
 	Mod+M { spawn "fuzzel"; }
 	Mod+P { spawn "wlogout"; }
@@ -229,9 +278,14 @@ binds {
 	Ctrl+Print { screenshot-screen; }
 	Alt+Print { screenshot-window; }
 }
+// Ubicación de capturas de pantalla
+screenshot-path "/home/juligar/Imágenes/screenshots/screenshot-%Y-%m-%d-%H-%M-%S.png"
 // Programas lanzados al inicio
 spawn-sh-at-startup "gammastep -O 5000"
-spawn-sh-at-startup "brillo -u 200000 -I"
+spawn-sh-at-startup "brillo -u 500000 -I"
 spawn-sh-at-startup "pipewire"
 spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "nm-applet"
+spawn-sh-at-startup "blueman-applet"
+spawn-sh-at-startup "swayidle -w timeout 180 'brillo -u 300000 -S 5' resume 'brillo -u 300000 -I' timeout 190 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors && brillo -u 500000 -I'"

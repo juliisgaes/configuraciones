@@ -4,21 +4,35 @@
 window#waybar {
 	background-color: #f4dddd;
 }
-#image {
-	padding: 6px;
+tooltip {
+	border: none;
+	background-color: #f4dddd;
+}
+tooltip label {
+	color: #524343;
+	text-shadow: none;
+	font-weight: bold;
+}
+#tray {
 	border-radius: 4px;
 	margin: 6px 6px 0px 6px;
+	padding: 8px 0px 8px 0px;
 	background-color: #9c4146;
 }
-#image:hover {
-	background-color: #40000a;
-}
-#wireplumber {
-	margin: 6px;
+#temperature {
 	padding: 6px;
 	color: #ffffff;
 	font-weight: bold;
 	border-radius: 4px;
+	margin: 6px 6px 0px 6px;
+	background-color: #9c4146;
+}
+#wireplumber {
+	padding: 6px;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 4px;
+	margin: 0px 6px 6px 6px;
 	background-color: #9c4146;
 }
 #battery {
@@ -27,6 +41,24 @@ window#waybar {
 	font-weight: bold;
 	border-radius: 4px;
 	margin: 0px 6px 6px 6px;
+	background-color: #9c4146;
+}
+#workspaces button {
+	padding: 6px;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 4px;
+	margin: 0px 6px 6px 6px;
+	background-color: #775656;
+}
+#workspaces button:hover {
+	box-shadow: none;
+	transition: none;
+	text-shadow: none;
+	background: #9c4146;
+	border-color: #9c4146;
+}
+#workspaces button.focused {
 	background-color: #9c4146;
 }
 #clock {

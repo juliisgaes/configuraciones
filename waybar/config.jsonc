@@ -2,36 +2,49 @@
 	"layer": "top",
 	"output": ["*"],
 	"position": "right",
-	"modules-right": ["wireplumber", "battery", "clock"],
+	"modules-left": ["tray", "temperature"],
+	"modules-right": ["wireplumber","battery#bat2", "battery", "niri/workspaces", "clock"],
 	"spacing": 0,
-	"image": {
-		"path": "/home/juligar/.config/waybar/recursos/power.png",
-		"size": 28,
-		"on-click": "wlogout"
+	"tray": {
+		"icon-size": 20,
+		"spacing": 8
 	},
-	"image#image2": {
-		"path": "/home/juligar/.config/waybar/recursos/menú.png",
-		"size": 28,
-		"on-click": "fuzzel"
-	},
-	"image#image3": {
-		"path": "/home/juligar/.config/waybar/recursos/wifi.png",
-		"size": 28,
-		"on-click": "nm-connection-editor"
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+		"format": "tem\n{temperatureC}",
+		"justify": "center"
 	},
 	"wireplumber": {
 		"format": "vol\n{volume}",
-		"tooltip": false,
-		"justify": "center"
+		"format-muted": "sin\naud",
+		"justify": "center",
+		"on-click": "pavucontrol"
+	},
+	"battery#bat2": {
+		"bat": "BAT1",
+		"format": "bat\n{capacity}",
+		"justify": "center",
+		"events": {
+			"on-charging-90": "notify-send 'Batería externa' 'Batería externa cargada'",
+			"on-discharging-20": "notify-send 'Batería externa' 'Porcentaje de batería externa bajo'"
+		}
 	},
 	"battery": {
+		"bat": "BAT0",
 		"format": "bat\n{capacity}",
-		"tooltip": false,
-		"justify": "center"
+		"justify": "center",
+		"events": {
+			"on-charging-90": "notify-send 'Batería interna' 'Batería interna cargada'",
+			"on-discharging-20": "notify-send 'Batería interna' 'Porcentaje de batería interna bajo'"
+		}
+	},
+	"niri/workspaces": {
+		"format": "esc\n {value}"
 	},
 	"clock": {
 		"format": "{:%I:\n%M,\n%p.}",
-		"tooltip": false,
+		"locale": "es_MX.UTF-8",
+		"tooltip-format": "{:%d/%m/%Y}",
 		"justify": "center"
 	}
 }

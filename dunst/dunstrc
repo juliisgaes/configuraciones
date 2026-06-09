@@ -1,8 +1,10 @@
 [global]
-origin = bottom-right
+origin = bottom-left
 offset = (6, 6)
-font = FreeMono 10
+font = FreeMono 11
 icon_theme = Papirus Light
 background = "#f4dddd"
 foreground = "#000000"
 frame_color = "#9c4146"
+min_icon_size = 64
+max_icon_size = 64

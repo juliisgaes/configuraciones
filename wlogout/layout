@@ -1,11 +1,11 @@
 {
 	"label": "bloquear",
-	"action": "",
-	"keybind": "b"
+	"action": "swaylock",
+	"keybind": "b",
 }
 {
 	"label": "bloquear-hibernar",
-	"action": "",
+	"action": "swaylock & doas zzz &",
 	"keybind": "d"
 }
 {
